@@ -184,17 +184,17 @@ const Interview = () => {
         }))
       };
       
-      const response = await axios.post('https://sw-ai-m50t.onrender.com/api/interviews', interviewData);
+      const response = await axios.post('https://35.154.201.113.sslip.io/api/interviews', interviewData);
       const savedInterview = response.data;
       setInterviewId(savedInterview._id);
       
-      const feedbackResponse = await axios.post('https://sw-ai-m50t.onrender.com/api/feedback/generate', {
+      const feedbackResponse = await axios.post('https://35.154.201.113.sslip.io/api/feedback/generate', {
         interviewData: savedInterview
       });
       
       const feedback = feedbackResponse.data.data;
       
-      await axios.put(`https://sw-ai-m50t.onrender.com/api/feedback/interview/${savedInterview._id}`, feedback);
+      await axios.put(`https://35.154.201.113.sslip.io/api/feedback/interview/${savedInterview._id}`, feedback);
       
       setFeedbackGenerated(true);
       

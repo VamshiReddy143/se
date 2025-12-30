@@ -16,7 +16,7 @@ const Home = () => {
     setIsLoading(true);
 
    
-     const response = await axios.post('https://sw-ai-m50t.onrender.com/api/interviews/generate-questions', {
+     const response = await axios.post('https://35.154.201.113.sslip.io/api/interviews/generate-questions', {
         role,
         level,
         techstack,

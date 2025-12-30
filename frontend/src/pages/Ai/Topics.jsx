@@ -33,7 +33,7 @@ const Topics = () => {
   const fetchCompanions = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("https://sw-ai-m50t.onrender.com/api/companions");
+      const res = await axios.get("https://35.154.201.113.sslip.io/api/companions");
       setCompanions(res.data);
     } catch (err) {
       console.error("Error fetching companions:", err);
@@ -73,7 +73,7 @@ const Topics = () => {
     e.preventDefault();
     console.log("Form Data:", formData);
     try {
-      await axios.post("https://sw-ai-m50t.onrender.com/api/companions/create", {
+      await axios.post("https://35.154.201.113.sslip.io/api/companions/create", {
         companion: formData,
       });
       await fetchCompanions(); // refresh list
@@ -353,9 +353,6 @@ const Topics = () => {
                     className="w-full border border-gray-300 sm:border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white sm:bg-transparent text-gray-800 sm:text-white"
                   >
                     <option value="english">English</option>
-                    <option value="spanish">Spanish</option>
-                    <option value="french">French</option>
-                    <option value="german">German</option>
                   </select>
                 </div>
               </div>

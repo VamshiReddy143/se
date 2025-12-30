@@ -14,7 +14,7 @@ const FeedbackPage = () => {
 useEffect(() => {
   const fetchInterviewData = async () => {
     try {
-      const response = await axios.get(`https://sw-ai-m50t.onrender.com/api/interviews/${id}`);
+      const response = await axios.get(`https://35.154.201.113.sslip.io/api/interviews/${id}`);
       const interview = response.data;
       
       // Use the actual feedback data, not a transformation
